@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>氷馬子豪 - 用AI打造沉浸式影音敘事教學</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #e74c3c;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+            margin-top: 35px;
+            background: #fdf2f2;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h3 {
+            color: #8e44ad;
+            margin-top: 25px;
+            border-bottom: 2px solid #8e44ad;
+            padding-bottom: 8px;
+        }
+        .metadata {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .metadata h3 {
+            margin-top: 0;
+            color: #ffffff;
+            border: none;
+        }
+        .slide-note {
+            background: #e8f6f3;
+            border-left: 4px solid #1abc9c;
+            padding: 12px 18px;
+            margin: 15px 0;
+            font-style: italic;
+            color: #16a085;
+            border-radius: 5px;
+        }
+        .storyboard-concept {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .tech-highlight {
+            background: #f8f9fa;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .cinema-technique {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .prompt-secret {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .post-production {
+            background: #fff8e1;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .framework-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .three-questions {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .workflow-step {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .negative-prompts {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .scene-example {
+            background: #f0f8ff;
+            border: 2px solid #4169e1;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .competition-info {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: yellow;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .director-tip {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        .warning {
+            background: #fdeded;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Metadata Section -->
+        <div class="metadata">
+            <h3>📋 課程資訊 (Metadata)</h3>
+            <p><strong>標題 (Title)：</strong>用AI打造沉浸式影音敘事 - 從分鏡概念到專業MV製作</p>
+            <p><strong>講師 (Lecturer)：</strong>氷馬子豪</p>
+            <p><strong>身份：</strong>室內設計師、AI影音導演、AI講師、創作者（曾任職周杰倫公司）</p>
+            <p><strong>課程名稱 (Course)：</strong>AI應用課程 - 沉浸式影音敘事專題</p>
+            <p><strong>日期 (Date)：</strong>2025年9月13日</p>
+            <p><strong>概要 (Overview)：</strong>本課程由資深影音創作者分享AI影片製作的核心技術，從分鏡概念設計到MV製作的完整工作流程。內容涵蓋三大核心問題的思考框架、分鏡邏輯與鏡頭語言、提示詞的精細控制技巧、後製特效技術，以及如何克服AI生成影片的常見問題。講師已製作20支MV作品，分享實戰經驗與專業技巧。</p>
+        </div>
+
+        <h1>🎬 氷馬子豪 - 用AI打造沉浸式影音敘事</h1>
+
+        <!-- 講師自我介紹 -->
+        <h2>👨‍🎨 講師自我介紹與背景</h2>
+
+        <p>簡單介紹一下我自己。我現在是AI講師，也是設計師，也是創作者。目前我做的MV現在已經做到第20隻了。我以前是在周杰倫的公司上班。</p>
+
+        <div class="director-tip">
+            <h4>🏗️ 多元背景優勢</h4>
+            <ul>
+                <li><strong>室內設計師：</strong>具備空間感與美學基礎</li>
+                <li><strong>AI影音導演：</strong>專精AI影片製作技術</li>
+                <li><strong>實務經驗：</strong>曾任職周杰倫公司，擁有音樂產業背景</li>
+                <li><strong>創作實績：</strong>已完成20支MV作品</li>
+                <li><strong>跨域整合：</strong>結合室內設計、3D技術與實際手作</li>
+            </ul>
+        </div>
+
+        <p>我們不只是室內設計和3D，也有實際手作的案例，這是我自己興趣做的電競台。</p>
+
+        <!-- 課程內容概要 -->
+        <h2>📚 分享內容概要</h2>
+
+        <div class="three-questions">
+            <h4>🎯 今天分享的兩大主題</h4>
+            <ol>
+                <li><strong>影片製作概念：</strong>分鏡設計的思考框架與邏輯</li>
+                <li><strong>MV製作概念：</strong>專業MV的技術細節與實作技巧</li>
+            </ol>
+        </div>
+
+        <!-- 分鏡概念核心 -->
+        <h2>🎭 我的分鏡概念核心</h2>
+
+        <div class="slide-note">
+            （簡報畫面：我製作影片前思考的問題 - 顯示三個核心問題與分鏡流程）
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/LINE_ALBUM_2025913_250914_48.jpg"
+                 alt="我製作影片前思考的問題"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <h3>影片製作前的三個核心問題</h3>
+        <div class="three-questions">
+            <h4>🤔 創作前的基礎思考</h4>
+            <p>如果我要做影片的話，我思考三個問題：</p>
+            <ol>
+                <li><strong>🌍 我在哪？</strong>
+                    <p>設定空間與時間，由大範圍聚焦到小焦點，簡單表達重點</p>
+                </li>
+                <li><strong>👤 我是誰？</strong>
+                    <p>角色的性別、特徵、重點</p>
+                </li>
+                <li><strong>🎯 我要幹嘛？</strong>
+                    <p>在錯誤的時間出現在錯誤的地點</p>
+                </li>
+            </ol>
+        </div>
+
+        <h3>分鏡邏輯的五步驟流程</h3>
+        <div class="framework-box">
+            <h4>📋 氷馬式分鏡邏輯</h4>
+            <p>決定好三個核心問題後，我會先開始畫一個很簡單的分鏡。我的邏輯是：</p>
+            <div class="workflow-step">1. 大場景</div>
+            <div class="workflow-step">2. 小空間</div>
+            <div class="workflow-step">3. 周遭細節</div>
+            <div class="workflow-step">4. 時間表達</div>
+            <div class="workflow-step">5. 人物登場</div>
+
+            <p><strong>黃金法則：</strong>我會在前面用大概4-5卡，用最簡單的方式把一個短片交代清楚。接下來人物出現就是它的性別特徵，然後要呈現的重點是什麼。接下來才是這個故事要表達的東西。</p>
+        </div>
+
+        <div class="slide-note">
+            （簡報畫面：我的分鏡概念 - 展示手繪分鏡表的詳細規劃）
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/S__59031565_0.jpg"
+                 alt="我的分鏡概念 - 手繪分鏡表"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 15px;">
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/S__59031566_0.jpg"
+                 alt="分鏡概念詳細分鏡表"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 15px;">
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/S__59031567_0.jpg"
+                 alt="分鏡概念延續分鏡表"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- 分鏡實例分析 -->
+        <h2>🏥 分鏡實例：醫院場景分析</h2>
+
+        <h3>四卡開場建立場景</h3>
+        <div class="scene-example">
+            <h4>🎬 醫院場景分鏡實例</h4>
+            <ul>
+                <li><strong>場景1：</strong>下大雨的醫院 - 建立大環境氛圍</li>
+                <li><strong>場景2：</strong>救護車（比較縮小的畫面）- 聚焦交通工具</li>
+                <li><strong>場景3：</strong>很多人在忙碌 - 展現環境細節與活動</li>
+                <li><strong>場景4：</strong>時鐘顯示凌晨三點 - 表達關鍵時間點</li>
+            </ul>
+            <p><strong>時間控制：</strong>前面四卡，一卡五秒，我前面20秒就把故事場景交代清楚。</p>
+        </div>
+
+        <h3>人物登場與角色設定</h3>
+        <div class="storyboard-concept">
+            <p>接下來人物出現，我設定了兩個人物，要做的事情是什麼。旁邊我會寫說需要的音效。</p>
+            <p><strong>技術說明：</strong>這是很早期的分鏡，那個時候我還在用D-ID做對嘴，大概是一年到兩年前的東西了，但這整個邏輯是固定的。</p>
+        </div>
+
+        <!-- 鏡頭語言與運動 -->
+        <h2>📹 鏡頭運動標記與視覺語言</h2>
+
+        <h3>鏡頭移動的標記系統</h3>
+        <div class="cinema-technique">
+            <h4>🎯 視覺化鏡頭運動</h4>
+            <p>護士出現之後，我會畫一個綠色的箭頭，標識鏡頭移動的方向：</p>
+            <ul>
+                <li><strong>←→ 左往右移</strong></li>
+                <li><strong>→← 右往左移</strong></li>
+                <li><strong>⬆⬇ 放大縮小</strong></li>
+            </ul>
+            <p><strong>音效設計：</strong>電梯門打開會有音效，丁的電梯打開門的聲音。電梯升降背景會有機械式的聲音。</p>
+        </div>
+
+        <h3>鏡頭語言的心理效應</h3>
+        <div class="cinema-technique">
+            <h4>🧠 視覺心理學應用</h4>
+            <p><strong>方向性的意義：</strong></p>
+            <ul>
+                <li><strong>左往右移動：</strong>醫生是從左往右邊講話，因為配合我們閱讀的習慣（閱讀英文），這個會顯得特別有說服力。</li>
+                <li><strong>右往左移動：</strong>前一個鏡頭護士是從右邊向左邊，那個感覺會讓你覺得這個人一定有問題，因為跟我們的習慣不一樣。</li>
+            </ul>
+            <p><strong>劇情高潮：</strong>接下來護士會講出一個重點關鍵性的東西，那是最後一個壓軸的反轉點。</p>
+        </div>
+
+        <!-- 影片實作技術 -->
+        <h2>🎥 影片實作與技術整合</h2>
+
+        <h3>分鏡概念的實際呈現</h3>
+        <div class="tech-highlight">
+            <h4>🔧 實作技術要點</h4>
+            <p>用這樣的分鏡概念出來的東西：</p>
+            <ul>
+                <li>救護車場景帶到緊急的畫面</li>
+                <li>描述人物現在正在做什麼</li>
+                <li>時間很明確地表達故事正在發生的地點和場景</li>
+                <li>主角出現配上音效：腳步聲、電梯開門的聲音</li>
+            </ul>
+        </div>
+
+        <h3>AI限制的解決方案</h3>
+        <div class="director-tip">
+            <h4>⚡ 實拍與AI結合</h4>
+            <p>有些AI生不出來的，我們就實際去拍攝。像按電梯的手指，那是我們自己拍我自己的手，用我們家的電梯，因為早期AI生不出這個畫面。</p>
+            <p><strong>混合製作策略：</strong>AI生成 + 實拍素材 = 完美整合</p>
+        </div>
+
+        <!-- MV製作重點 -->
+        <h2>🎵 MV製作的專業技巧</h2>
+
+        <h3>容易被忽略的關鍵細節</h3>
+
+        <div class="slide-note">
+            （簡報畫面：我注意的細節 - 展示真實感提升的關鍵要素）
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/LINE_ALBUM_2025913_250914_49.jpg"
+                 alt="我注意的細節 - MV製作重點"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <div class="prompt-secret">
+            <h4>❗ AI影片真實感的關鍵</h4>
+            <p>我們平常在做MV，大家比較容易會忽略的東西，為什麼有些人做出來的AI影片會覺得有點假、塑膠感很重？我覺得最大的重點在於：</p>
+
+            <h5>👁️ 眼神表現</h5>
+            <ul>
+                <li>有沒有眨眼</li>
+                <li>眨眼的自然節奏</li>
+                <li>眼神的聚焦與散焦</li>
+            </ul>
+
+            <h5>💨 呼吸感</h5>
+            <ul>
+                <li>有沒有呼吸的感覺</li>
+                <li>胸腔的自然起伏</li>
+                <li>呼吸節奏與情緒的配合</li>
+            </ul>
+        </div>
+
+        <h3>提示詞的精細控制技術</h3>
+        <div class="tech-highlight">
+            <h4>📝 微表情控制提示詞</h4>
+            <p>這些小細節都可以在提示詞裡面寫上去：</p>
+            <ul>
+                <li><strong>自然呼吸的動作</strong></li>
+                <li><strong>自然眨眼的動作</strong></li>
+                <li><strong>微表情控制：</strong>像人感覺到害怕的時候，瞳孔會放大，鼻孔可能會不自覺收縮</li>
+            </ul>
+            <p><strong>精密控制：</strong>這些東西在提示詞裡面都可以精確控制。你用像那個提示詞加上控制的話，連鼻孔都有辦法控制。</p>
+        </div>
+
+        <!-- 環境細節控制 -->
+        <h2>🌬️ 環境細節控制技術</h2>
+
+        <h3>頭髮飄動的風感控制</h3>
+        <div class="prompt-secret">
+            <h4>💫 風感層次的精確描述</h4>
+            <p><strong>風力設定：</strong></p>
+            <ul>
+                <li>有沒有風？如果沒有特別寫這個場景我要有風</li>
+                <li><strong>小風、中風、大風不一樣：</strong>飄動的感覺會不一樣</li>
+                <li>頭髮的重量感與材質感</li>
+            </ul>
+        </div>
+
+        <h3>服裝配件的自然運動</h3>
+        <div class="prompt-secret">
+            <h4>👗 服裝物理的真實感</h4>
+            <ul>
+                <li><strong>衣服運動：</strong>衣服有沒有晃動</li>
+                <li><strong>配件物理：</strong>轉身時項鍊耳環那些配件，有沒有自然的下垂</li>
+                <li><strong>重力感：</strong>有沒有自然的運動</li>
+            </ul>
+            <p><strong>提示詞長度：</strong>這些東西通通都有關係，所以我一個鏡頭寫下來，我的提示詞可能會超過500字是有可能的。</p>
+        </div>
+
+        <!-- 演員表現層次 -->
+        <h2>🎭 演員表現的層次控制</h2>
+
+        <h3>多人場景的景深控制</h3>
+        <div class="cinema-technique">
+            <h4>🎬 專業級景深技術</h4>
+            <p>這件事情還蠻關鍵的。比方說我們有一支MV，請了Nibo來做客串。兩個人同時表演時，如何控制他們的前後景深？鏡頭的旋轉要怎麼控制？</p>
+            <p><strong>核心技術：</strong>這跟提示詞有關係，不是單純寫說"我要讓它左轉到右"就可以實現。</p>
+        </div>
+
+        <h3>演員分層描述技巧</h3>
+        <div class="framework-box">
+            <h4>📋 分層描述的順序邏輯</h4>
+            <p><strong>演員表現分層寫法：</strong></p>
+            <ul>
+                <li><strong>左邊演員：</strong>頭髮、裝法、衣服、褲子結束</li>
+                <li><strong>右邊演員：</strong>裝法、衣服、褲子、裙子，然後多寫一個靴子或鞋子的部分</li>
+            </ul>
+
+            <h5>🎯 景深控制原理</h5>
+            <p>搭配旋轉，畫面就會讓前面的演員在前，後面的演員在後。因為前面沒有寫到鞋子，所以鏡頭不會拍到它的鞋子，旋轉時它自然就會在前面。後面的人因為有寫到鞋子，所以自然就會往後移。</p>
+
+            <p><strong>動態效果：</strong>搭配dynamic動態旋轉鏡頭，它自然就會這樣轉過來。</p>
+        </div>
+
+        <!-- 提示詞順序的重要性 -->
+        <h2>📝 提示詞順序的關鍵影響</h2>
+
+        <div class="warning">
+            <h4>⚠️ 順序決定鏡頭焦點</h4>
+            <p><strong>實際案例：</strong>寫的順序很重要。有一次我寫完全身的裝法造型配件，突然想到要他有一個軍事風的特大皮帶頭，我把它寫在最後，結果鏡頭就慢慢移、慢慢移、慢慢移，最後鏡頭就聚焦在他的皮帶。</p>
+            <p><strong>重要結論：</strong>所以這個東西跟你寫的先後順序有很重要的關聯性。</p>
+        </div>
+
+        <!-- 看不見但影響大的技巧 -->
+        <h2>🎨 看不見但有著大影響的小技倆</h2>
+
+        <div class="slide-note">
+            （簡報畫面：看不見但有著大影響的小技倆 - 展示五大關鍵技術）
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/S__59031569_0.jpg"
+                 alt="看不見但有著大影響的小技倆"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <h3>影片晃動技術</h3>
+        <div class="post-production">
+            <h4>📺 手持感的營造</h4>
+            <p>用剪輯軟體裡面的晃動鏡頭技巧。把這個晃動鏡頭放進去特效後，把參數拉到最低，讓畫面會有一種微微的手持感覺。</p>
+            <p><strong>效果：</strong>這個可以減少AI影片單純生成的塑膠感，增加一點人味，看起來會比較像是手拍攝。</p>
+        </div>
+
+        <h3>特效掩飾AI瑕疵</h3>
+        <div class="post-production">
+            <h4>✨ 光效/灰塵/雜訊/煙霧的策略運用</h4>
+            <p><strong>掩飾策略：</strong>只要看到我的影片裡面有加入光、灰塵、雜訊、煙霧，就代表說這個畫面的AI生成一定有某種程度上的瑕疵。衣服可能有一塊不見，手指可能有一塊會跑掉。</p>
+            <p><strong>技術原理：</strong>我們用這種特效去分散觀眾的注意力，甚至去把有瑕疵的地方遮住。</p>
+        </div>
+
+        <!-- 影片流動感技術 -->
+        <h2>🌊 用關鍵幀始終讓影片維持流動</h2>
+
+        <h3>Flow感的創造技術</h3>
+        <div class="cinema-technique">
+            <h4>🎵 音樂節奏與視覺流動</h4>
+            <p>我們影片會有一種flow的感覺。我比較能講說我們有一個方法，假設我們的手是抓著演員的頭。當音樂開始在動的時候，它忽快忽慢，你就可以抓著那個頭的感覺，有點像是去移動。</p>
+
+            <p><strong>回歸技術：</strong>到某一個地方，你覺得音樂差不多要停止了，就是有一個回來的感覺。你不能讓這個東西從這邊出去之後再從這邊進來，那個flow就會斷掉。</p>
+        </div>
+
+        <h3>視覺連續性的維持</h3>
+        <div class="director-tip">
+            <h4>🔄 連續性法則</h4>
+            <p>很多人在看我們的影片，問那個流暢感是什麼？就是你抓著它的頭髮把它拉出畫面之後，你要有辦法拉回來。不能是把它丟出去之後就不見了。而且盡可能不要讓它一直固定維持在畫面的中間，看久會視覺疲勞。</p>
+        </div>
+
+        <!-- 關鍵幀移除LOGO技術 -->
+        <h2>🎯 關鍵幀移除LOGO技術</h2>
+
+        <div class="tech-highlight">
+            <h4>📐 浮水印移除與畫面動態</h4>
+            <p>我們有一個叫做關鍵幀這件事情。可以把影片畫面稍微拉一點點，這個方法是因為我們生成出來的東西都會有logo，右下角都會有免費軟體的浮水印。</p>
+
+            <h5>🔧 技術步驟</h5>
+            <ol>
+                <li>把畫面拉大，把logo移出畫面之後，它就超過16比9的比例</li>
+                <li>把畫面稍微靠到最左邊設一個關鍵幀</li>
+                <li>讓影片跑完以後，關鍵幀移到最右邊</li>
+            </ol>
+
+            <p><strong>附加效果：</strong>所以它裡面也會有一個很微小的動態，你看畫面不一定看得出來，但實際上它是有在動，所以維持那個flow沒有停下來的感覺。而且這個畫面在動的時候，你也可以做一些微的放大或者縮小，能夠讓這個東西看起來會有一個更順暢的感覺。</p>
+        </div>
+
+        <!-- 配合音樂的動作 -->
+        <h2>🎶 配合音樂的精準控制</h2>
+
+        <div class="cinema-technique">
+            <h4>🥁 BPM與樂器演奏控制</h4>
+            <p>因為我比較常做MV，所以會需要去對樂器的感覺。我們可以給AI在生成的時候指定它的BPM，說我這首歌需要節奏多少：70、80、120。大概你可以描寫說我需要什麼樣子演奏樂器的技巧，它會有大概一半左右的機率，會生成很符合你條件的東西。</p>
+        </div>
+
+        <h3>實際效果展示</h3>
+        <div class="scene-example">
+            <h4>🎬 符合所有條件的片段效果</h4>
+            <p>符合以上這些所有條件生成出來的片段：</p>
+            <ul>
+                <li>接下來會帶入音樂的節奏</li>
+                <li>會有鼓手在動，畫面有在搖，有灰塵</li>
+                <li>樂團進來的時候，可以看到每個手指的動作</li>
+                <li>刷和弦的動作都有在拍子上，都有在重點的位置</li>
+            </ul>
+            <p><strong>技術成果：</strong>這個都是AI直接生成的。接下來我把Nibo請過來，幫忙一起做表演的部分。這一整段是重做的。</p>
+        </div>
+
+        <!-- AI創作比賽資訊 -->
+        <h2>🏆 AI創作比賽資訊</h2>
+
+        <div class="competition-info">
+            <h4>🎯 NVIDIA贊助AI創作比賽</h4>
+            <p>這是我找到的一個比賽，這是NVIDIA底下六大贊助的GPU廠商提供的。我會幫大家爭取到免費的額度，這個東西最後有可能會有一張是由黃仁勳簽署出來的證書。</p>
+
+            <h5>🏅 比賽獎項</h5>
+            <ul>
+                <li><strong>第一名獎勵：</strong>15000點的點數</li>
+                <li><strong>使用引擎：</strong>這是一個新的引擎</li>
+                <li><strong>比賽目標：</strong>鼓勵現在的創作者能夠有更多的創意發揮</li>
+                <li><strong>收集目標：</strong>收集台灣更多很厲害的創作者</li>
+            </ul>
+        </div>
+
+        <!-- 反向提示詞分享 -->
+        <h2>🚫 我的反向提示詞秘笈</h2>
+
+        <div class="slide-note">
+            （簡報畫面：我的反向提示詞 - 顯示中英文版本的完整清單）
+            <br><br>
+            <img src="./06.氷馬子豪_室內設計師_AI影音導演_用AI打造沉浸式影音敘事/S__59031570_0.jpg"
+                 alt="我的反向提示詞 - 中英文對照"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <div class="negative-prompts">
+            <h4>📸 快拍照！實測有效的反向提示詞</h4>
+            <p><strong>重要說明：</strong>這些東西是像我們用Kling或者很多軟體，它有可能會造成像手指崩壞，有一些影像會錯亂。這個是我實測過發現這些東西加上去放在反向提示詞裡面可以有效地降低。只能降低而已，不可能到完全沒有。</p>
+
+            <div class="code-block">
+                <h5>🇹🇼 中文反向提示詞</h5>
+                <p>手指變形,低品質,動畫,模糊,失真,毀容,抽象,扭曲,拼貼,顆粒感</p>
+
+                <h5>🇺🇸 英文反向提示詞</h5>
+                <p>Deformed fingers, Low quality, animation, blur, distortion, disfigurement, abstract, twisted, collage, grainy</p>
+            </div>
+        </div>
+
+        <!-- 框架與心智模型總結 -->
+        <h2>🎓 框架與心智模型總結</h2>
+
+        <div class="framework-box">
+            <h3>🧠 氷馬式AI影音創作框架</h3>
+
+            <h4>📋 三問分鏡設計法</h4>
+            <ol>
+                <li><strong>空間定位：</strong>我在哪？（大場景→小空間→細節→時間）</li>
+                <li><strong>角色設定：</strong>我是誰？（性別、特徵、重點）</li>
+                <li><strong>行動目標：</strong>我要幹嘛？（錯誤時間地點的戲劇張力）</li>
+            </ol>
+
+            <h4>⚡ 真實感提升五要素</h4>
+            <ol>
+                <li><strong>眼神控制：</strong>自然眨眼、眼神聚焦</li>
+                <li><strong>呼吸感：</strong>胸腔起伏、呼吸節奏</li>
+                <li><strong>微表情：</strong>瞳孔變化、鼻孔收縮</li>
+                <li><strong>環境物理：</strong>風感、重力、材質感</li>
+                <li><strong>服裝動態：</strong>衣物晃動、配件物理</li>
+            </ol>
+
+            <h4>🎯 後製優化三技巧</h4>
+            <ol>
+                <li><strong>微晃動效果：</strong>減少塑膠感，增加手拍感</li>
+                <li><strong>特效掩飾：</strong>用光效、灰塵、煙霧遮蓋AI瑕疵</li>
+                <li><strong>關鍵幀動態：</strong>維持flow感，移除浮水印</li>
+            </ol>
+
+            <h4>🎵 音樂同步控制法</h4>
+            <ol>
+                <li><strong>BPM設定：</strong>指定節奏速度（70/80/120）</li>
+                <li><strong>樂器技巧：</strong>描述演奏方式與動作</li>
+                <li><strong>視覺流動：</strong>抓住頭髮的感覺，拉出拉回</li>
+            </ol>
+        </div>
+
+        <!-- 實作提醒與進階技巧 -->
+        <div class="warning">
+            <h3>⚠️ 重要實作提醒</h3>
+            <ul>
+                <li><strong>提示詞長度：</strong>專業級鏡頭可能需要超過500字的詳細描述</li>
+                <li><strong>順序重要性：</strong>描述順序直接影響鏡頭焦點移動</li>
+                <li><strong>分層描述：</strong>多人場景要用分層寫法控制景深</li>
+                <li><strong>混合製作：</strong>AI生成有限制時，結合實拍素材</li>
+                <li><strong>反向提示詞：</strong>只能降低瑕疵，無法完全消除</li>
+            </ul>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="metadata">
+            <h3>📞 後續交流</h3>
+            <p>如果大家有興趣的話，也可以來找我討論。謝謝！</p>
+            <p><strong>創作成果：</strong>目前已完成20支MV作品，持續精進AI影音創作技術</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+            <h3 style="color: white;">🎉 課程結束</h3>
+            <p style="font-style: italic;">
+                本教學檔案根據氷馬子豪老師的AI沉浸式影音敘事課程內容整理製作<br>
+                結合室內設計美學與專業影音技術，提供AI影片製作的完整實戰指南<br>
+                適合影音創作者、設計師、以及對AI影片製作有興趣的學員深度學習
+            </p>
+        </div>
+    </div>
+</body>
+</html>
