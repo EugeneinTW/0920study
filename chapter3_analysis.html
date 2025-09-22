@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第三章 投資洞察摘要</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.65;
+      background: #f5f8fd;
+      color: #1f2933;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0c345d, #3f6da6);
+      color: #fff;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(12, 52, 93, 0.09);
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #10325a;
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin: 28px 0 12px;
+      color: #174a84;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d4e2f7;
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #e8f1fd;
+      color: #123b73;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: #e1ebff;
+      color: #23457a;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid #dbe6f8;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #1a3f6b;
+    }
+    .chart {
+      margin-top: 16px;
+      --max: 865;
+    }
+    .bar {
+      position: relative;
+      background: #eaf2ff;
+      border-radius: 999px;
+      margin: 12px 0;
+      padding: 8px 12px;
+      overflow: hidden;
+    }
+    .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4c7edc, #72a4ff);
+      width: calc(var(--value) / var(--max) * 100%);
+      border-radius: inherit;
+      opacity: 0.85;
+    }
+    .bar span {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: #18355a;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #5b708d;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f89;
+      margin-top: 32px;
+    }
+    a {
+      color: #2f65c8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第三章「金錢計量學公司」投資洞察</h1>
+    <p>追蹤西蒙斯與鮑姆從量化雛形到挫敗的全程，萃取建模、資料、風控與人際協作的可複製做法。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>離開學術後，西蒙斯把市場視為混沌系統，企圖用數學模型從噪音中提煉訊號<span class="pill">[p.60][p.62]</span></li>
+        <li>與藍尼．鮑姆重組戰隊、成立 Limroy 避險基金，靠趨勢演算法嘗試量化外匯機會<span class="pill">[p.67][p.68]</span></li>
+        <li>延攬詹姆斯．艾克斯與程式天才葛瑞格．胡蘭德，打造資料管線與「小豬籠」演算法雛形<span class="pill">[p.69][p.71][p.75]</span></li>
+        <li>演算法超額集中導致「馬鈴薯事件」，凸顯黑箱模型的可解釋性與監管風險<span class="pill">[p.75][p.76]</span></li>
+        <li>鮑姆拒絕停利的黃金、咖啡與債券倉位最終觸發 40% 強迫平倉條款，西蒙斯改採月度回報控噪音<span class="pill">[p.81][p.83][p.84]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>模型化混沌市場</td>
+            <td>以科學方法拆解價格序列，先定義可觀測狀態與訊號管線再進入回測</td>
+            <td>需掌握足量歷史資料與運算資源，避免黑箱推論無法驗證</td>
+            <td>[p.62]</td>
+          </tr>
+          <tr>
+            <td>人才配置</td>
+            <td>建立跨領域團隊（數學家＋程式人才），並以成果分潤綁定投入</td>
+            <td>需明確評估分潤與決策權，避免日後人際衝突</td>
+            <td>[p.67][p.68][p.71]</td>
+          </tr>
+          <tr>
+            <td>資料基礎建設</td>
+            <td>建置多來源數據捕捉與清洗（磁帶轉檔、手動填值、庫存更新）</td>
+            <td>格式不一與人工作業增加錯誤機率，需雙重校驗</td>
+            <td>[p.73][p.74]</td>
+          </tr>
+          <tr>
+            <td>集中度與監管</td>
+            <td>即時檢查部位占比，設置監管觸發門檻並建立解釋模型</td>
+            <td>過度依賴模型輸出會忽視情境，需人為二次確認</td>
+            <td>[p.75][p.76]</td>
+          </tr>
+          <tr>
+            <td>退出與溝通紀律</td>
+            <td>訂定強制停損條款與月度報表節奏，降低情緒化與投資人壓力</td>
+            <td>需提前寫入合約並取得投資人共識，否則易引發信任危機</td>
+            <td>[p.83][p.84]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>⾦錢計量學 Monemetrics：結合⾦錢與計量經濟的早期公司名稱<span class="pill">[p.62]</span></li>
+            <li>Limroy 基⾦：首個避險基金平台，核⼼策略為外匯趨勢交易<span class="pill">[p.68]</span></li>
+            <li>「小豬籠」系統：以線性代數生成資產權重的模型暫名<span class="pill">[p.75]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>混沌秩序：在噪音中尋找穩定模式的宇宙觀<span class="pill">[p.62]</span></li>
+            <li>強制停損契約：合作夥伴虧損達 40% 即由公司接管<span class="pill">[p.83]</span></li>
+            <li>資料煉油廠：把散落資料轉為可測試訊號的流程思維<span class="pill">[p.74]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>監管來電：CFTC 警示意味部位集中度過高<span class="pill">[p.75]</span></li>
+            <li>群眾排隊賣金：極端情緒暗示趨勢可能反轉<span class="pill">[p.81]</span></li>
+            <li>虧損超過 40%：自動觸發平倉條款與合作終止風險<span class="pill">[p.83]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控</h2>
+      <h3>外匯趨勢演算法（鮑姆）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>價格跌離趨勢線即買進、升破即賣出</td>
+            <td>近期價格低於趨勢線至預設幅度</td>
+            <td>趨勢反轉或超過設定回撤即平倉；需加入交易成本估計</td>
+            <td>移動平均、偏離百分比、流動性</td>
+            <td>[p.67]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>「小豬籠」多資產配置</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>線性代數推導資產權重，下達多市場部位</td>
+            <td>模型產生正向分數且資金配比未觸及集中限制</td>
+            <td>設定單一資產上限、監管觸發時強制縮減；保留人工解釋層</td>
+            <td>權重向量、集中度比率、監管門檻</td>
+            <td>[p.75][p.76]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行檢核與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>資料完整性</td>
+            <td>歷史序列覆蓋至少 10 年，且轉檔後經雙人抽驗</td>
+            <td>磁帶轉檔紀錄、人工填寫日誌</td>
+            <td>[p.73][p.74]</td>
+          </tr>
+          <tr>
+            <td>集中度警戒</td>
+            <td>單一品項權重不得超過總資金 20%，監管通知即減半</td>
+            <td>交易系統輸出、監管信件</td>
+            <td>[p.75]</td>
+          </tr>
+          <tr>
+            <td>夥伴停損條款</td>
+            <td>個人帳戶或共同帳戶虧損 ≥40% 即移交公司處理</td>
+            <td>合夥協議、每日風控報表</td>
+            <td>[p.83]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>趨勢偏離策略在外匯市場扣除成本後仍能產生超額報酬</td>
+            <td>每日匯率、交易成本、趨勢線參數</td>
+            <td>年化報酬 ≥ 基準 +2%，最大回撤低於基準</td>
+            <td>日頻 → 年度</td>
+            <td>[p.67]</td>
+          </tr>
+          <tr>
+            <td>多資產權重模型需加入集中度限制以降低尾部虧損</td>
+            <td>模型權重、部位限制、監管事件標記</td>
+            <td>限制後最大單日虧損較無限制情境下降 ≥30%</td>
+            <td>日頻 → 季度</td>
+            <td>[p.75][p.76]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場與出場規則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>依據</th>
+            <th>例外</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>模型信號需通過集中度與監管檢查後才下單</td>
+            <td>馬鈴薯事件顯示黑箱集中會引來監管與虧損</td>
+            <td>流動性極佳且有對沖時，可維持較高上限但須審批</td>
+            <td>[p.75][p.76]</td>
+          </tr>
+          <tr>
+            <td>夥伴或策略虧損達 40% 立即強制出場</td>
+            <td>鮑姆多次拒絕平倉導致虧損擴大與合作終止</td>
+            <td>若已有明確風險對沖且回撤屬技術性錯價，可經投資委員會覆核</td>
+            <td>[p.83]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart">
+        <div class="bar" style="--value:4;"><span>Limroy 募資目標 4 百萬美元<span class="pill">[p.67]</span></span></div>
+        <div class="bar" style="--value:40;"><span>小豬籠一次產出約 40 筆指令<span class="pill">[p.75]</span></span></div>
+        <div class="bar" style="--value:865;"><span>黃金高點 865 美元/盎司<span class="pill">[p.81]</span></span></div>
+        <div class="bar" style="--value:40;"><span>強制平倉觸發虧損 40% 門檻<span class="pill">[p.83]</span></span></div>
+        <div class="bar" style="--value:9;"><span>葛瑞格．胡蘭德年薪 9 千美元<span class="pill">[p.71]</span></span></div>
+        <div class="bar" style="--value:25;"><span>鮑姆獲利分成 25%<span class="pill">[p.68]</span></span></div>
+      </div>
+      <p class="note">條形長度採原始數值比例（百萬美元、指令筆數、美元、百分比、千美元、分成比），用以比對第三章中的資金規模與風控節點。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>情境</th>
+            <th>決策 / 行動</th>
+            <th>成果與啟示</th>
+            <th>可複製要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>創立金錢計量學公司</td>
+            <td>放下教授生涯，將市場視為待建模的混沌系統</td>
+            <td>建立量化視角與人才網絡，但也承擔名譽風險</td>
+            <td>以科學假說框架定義投資目標</td>
+            <td>[p.60][p.62]</td>
+          </tr>
+          <tr>
+            <td>打造「小豬籠」資料流程</td>
+            <td>收集舊磁帶、手動輸入資料、撰寫程式生成權重</td>
+            <td>模型可大幅自動化，卻因集中度遭監管強迫平倉</td>
+            <td>資料與模型需搭配解釋層與限制條款</td>
+            <td>[p.73][p.75][p.76]</td>
+          </tr>
+          <tr>
+            <td>黃金與咖啡倉位衝突</td>
+            <td>鮑姆拒絕停利，西蒙斯動用強制平倉條款</td>
+            <td>合作破裂並引發重大虧損，迫使制度重整</td>
+            <td>明文化虧損觸發並確保即時執行</td>
+            <td>[p.81][p.82][p.83]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">部署量化策略前確認資料、集中度與停損防線</td>
+            <td>資料來源與版本確認</td>
+            <td>來源、轉檔、校驗三項紀錄齊備</td>
+            <td>補齊缺漏資料或重新轉檔</td>
+            <td>[p.74]</td>
+          </tr>
+          <tr>
+            <td>集中度在限制內</td>
+            <td>單品權重 < 限制，並有備用對沖方案</td>
+            <td>縮減部位或加入對沖再上線</td>
+            <td>[p.75]</td>
+          </tr>
+          <tr>
+            <td>停損條款工作</td>
+            <td>表內夥伴與策略均簽署 40% 強制出場機制</td>
+            <td>更新合約並告知投資人</td>
+            <td>[p.83][p.84]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第三章，頁碼如標示。建議回查原文以驗證上下文與細節。
+    </footer>
+  </main>
+</body>
+</html>

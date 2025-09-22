@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第二章 投資洞察摘要</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+      background: #f6f9fd;
+      color: #1f2933;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0f3a63, #3f6eab);
+      color: #fff;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 58, 99, 0.09);
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #10325a;
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin: 28px 0 12px;
+      color: #174a84;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d6e3f6;
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #eaf2fc;
+      color: #123b73;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: #e3edff;
+      color: #23457a;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid #dbe6f8;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #1a3f6b;
+    }
+    .chart {
+      margin-top: 16px;
+      --max: 50;
+    }
+    .bar {
+      position: relative;
+      background: #eaf2ff;
+      border-radius: 999px;
+      margin: 12px 0;
+      padding: 8px 12px;
+      overflow: hidden;
+    }
+    .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4c7edc, #72a4ff);
+      width: calc(var(--value) / var(--max) * 100%);
+      border-radius: inherit;
+      opacity: 0.85;
+    }
+    .bar span {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: #18355a;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #5b708d;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f89;
+      margin-top: 32px;
+    }
+    a {
+      color: #2f65c8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第二章「從密碼學家到數學系主任」投資洞察</h1>
+    <p>聚焦西蒙斯於情報單位與學術管理的養成，萃取可套用於量化投資、團隊打造與風控的關鍵做法。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>IDA 的破解任務迫使西蒙斯把統計與機率導入資料噪音中找規律，薪資翻倍也為債務與實驗籌資創造空間<span class="pill">[p.40]</span></li>
+        <li>「爛點子也要分享」的點子工廠文化，示範量化團隊需要的知識交流與快速原型流程<span class="pill">[p.42]</span></li>
+        <li>機密論文以隱藏狀態取代基本面解釋，專注於可交易訊號並聲稱年報酬可達 50%<span class="pill">[p.45][p.46]</span></li>
+        <li>公開反戰信被立刻開除，提醒投資人掌握現金流與職涯主導權以應對突發制度風險<span class="pill">[p.49][p.50]</span></li>
+        <li>弗萊費爾德的計量模型讓資金 10 倍成長、浮動匯率開啟新波動時代，促使西蒙斯創立外匯交易公司<span class="pill">[p.56][p.57][p.58]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>演算法導向研究</td>
+            <td>把問題拆成資料→演算法→測試迭代，以統計工具在噪音中尋找穩定規律</td>
+            <td>須有可控的資料權限與運算資源，避免落入黑箱無法驗證</td>
+            <td>[p.40][p.41]</td>
+          </tr>
+          <tr>
+            <td>點子工廠文化</td>
+            <td>建立跨職能審議機制，獎勵「爛點子也要說」以提高訊號探索密度</td>
+            <td>需要高信任與快速驗證流程，防止噪音累積</td>
+            <td>[p.42][p.52]</td>
+          </tr>
+          <tr>
+            <td>狀態偵測交易</td>
+            <td>優先判斷市場所處狀態，再選擇匹配的策略，而非先找理由</td>
+            <td>狀態辨識需足量歷史回測，且須管理頻繁交易成本假設</td>
+            <td>[p.46][p.47]</td>
+          </tr>
+          <tr>
+            <td>職涯控權對沖</td>
+            <td>為核心團隊設立現金儲備與可轉換技能，避免單一雇主風險</td>
+            <td>需兼顧合約義務與保密條款，避免重演 IDA 式解雇</td>
+            <td>[p.49][p.50]</td>
+          </tr>
+          <tr>
+            <td>制度變革時機</td>
+            <td>追蹤政策造成的波動代際（例：匯率浮動），在結構轉換時布局模型</td>
+            <td>須確認資料可覆蓋新制度期，並預估極端事件</td>
+            <td>[p.57][p.58]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>隱藏馬可夫模型：以不可觀測狀態解釋價格序列的統計工具<span class="pill">[p.46]</span></li>
+            <li>宏觀變數：少量能解釋市場狀態轉換的高層指標<span class="pill">[p.46]</span></li>
+            <li>計量經濟模型：輸入產量等數據預測期貨價格的系統化方法<span class="pill">[p.56]</span></li>
+            <li>陳西不變式：跨維度幾何不變量，示範純數學成果可跨領域應用<span class="pill">[p.55]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>Idea Factory：鼓勵錯誤以換取高迭代速度的組織設計<span class="pill">[p.42][p.52]</span></li>
+            <li>State Detection：先辨識市場狀態再下單的決策架構<span class="pill">[p.46]</span></li>
+            <li>Autonomy Hedge：以資本與技能對沖職涯突發風險<span class="pill">[p.49][p.50]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>制度轉換訊號：固定匯率改為浮動→波動率驟升機會<span class="pill">[p.57]</span></li>
+            <li>人才密度訊號：能否吸引頂尖數學家是量化團隊競爭力先行指標<span class="pill">[p.51][p.52]</span></li>
+            <li>資金倍增訊號：10 倍報酬顯示模型具規模潛力但伴隨社會價值疑慮<span class="pill">[p.56][p.57]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控</h2>
+      <h3>IDA 機率股市模型（雛型量化）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>以八種隱藏市場狀態推導每日交易方向</td>
+            <td>模型辨識當前狀態為「良好」或其他正向 regime</td>
+            <td>書中未明確說明；建議狀態轉弱時即平倉，評估交易成本</td>
+            <td>價格序列、波動率、轉移機率矩陣</td>
+            <td>[p.46][p.47]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>弗萊費爾德原物料量化策略</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>計量經濟模型預測原物料期貨（以糖為例）</td>
+            <td>農作物產量下滑等輸入指標顯示價格將上漲</td>
+            <td>書中未明確說明；建議設置目標價與停損，避免波動吞噬收益</td>
+            <td>產量統計、期貨曲線、政策消息</td>
+            <td>[p.56]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行清單與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>資料完整度</td>
+            <td>隱藏狀態模型需覆蓋至少 3 個市場週期</td>
+            <td>交易所歷史價量、央行統計</td>
+            <td>[p.46]</td>
+          </tr>
+          <tr>
+            <td>創意迭代節奏</td>
+            <td>每月最少舉辦一次點子工廠討論並產生待測訊號</td>
+            <td>團隊例會紀錄、原型清單</td>
+            <td>[p.42][p.52]</td>
+          </tr>
+          <tr>
+            <td>職涯風險緩衝</td>
+            <td>核心人員現金儲備≥6 個月薪資或具替代收入管道</td>
+            <td>財務報表、個人財務計畫</td>
+            <td>[p.49][p.50]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>隱藏狀態模型能在交易成本後仍優於基準</td>
+            <td>每日收盤價、波動率、交易成本假設</td>
+            <td>年化報酬率 ≥ 基準 +2%，最大回撤低於基準</td>
+            <td>日頻 → 年度匯總</td>
+            <td>[p.46][p.47]</td>
+          </tr>
+          <tr>
+            <td>農作物供需指標對糖期貨報酬具領先性</td>
+            <td>產量統計、期貨價格、政策公告日期</td>
+            <td>訊號發佈後 1-3 個月平均報酬顯著為正</td>
+            <td>月頻 → 季度檢驗</td>
+            <td>[p.56]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場 / 出場規則對照</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>依據</th>
+            <th>例外</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>狀態轉弱即減碼</td>
+            <td>IDA 模型強調狀態辨識，而非執著基本面理由</td>
+            <td>若有對沖或跨市場協同訊號，可縮小減碼幅度</td>
+            <td>[p.46]</td>
+          </tr>
+          <tr>
+            <td>制度變革前預先建立觀測倉</td>
+            <td>浮動匯率啟動時西蒙斯即判斷波動升高</td>
+            <td>若資訊不對稱或法規未明，應延後部署</td>
+            <td>[p.57][p.58]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart" style="--max:50;">
+        <div class="bar" style="--value:2;"><span>IDA 薪資提升 2 倍<span class="pill">[p.40]</span></span></div>
+        <div class="bar" style="--value:8;"><span>模型設定 8 種市場狀態<span class="pill">[p.46]</span></span></div>
+        <div class="bar" style="--value:50;"><span>宣稱年報酬 50% 目標<span class="pill">[p.45]</span></span></div>
+        <div class="bar" style="--value:10;"><span>弗萊費爾德資金成長 10 倍到 600 萬美元<span class="pill">[p.56]</span></span></div>
+        <div class="bar" style="--value:37;"><span>37 歲獲維布倫幾何獎<span class="pill">[p.55]</span></span></div>
+        <div class="bar" style="--value:20;"><span>1978 年創立外匯公司（距離離開 IDA 約 20 年）<span class="pill">[p.58]</span></span></div>
+      </div>
+      <p class="note">條狀長度以各指標原始數值比例呈現（倍數、百分比、金額、年齡），用於比對第二章中的量化與生涯節奏。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>情境</th>
+            <th>決策 / 行動</th>
+            <th>成果與啟示</th>
+            <th>可複製要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IDA 破解任務</td>
+            <td>以演算法拆解問題、交由專職程式設計師執行</td>
+            <td>建立可擴充的模型思維與團隊協作默契</td>
+            <td>區分策略研發、程式實作與測試角色</td>
+            <td>[p.40][p.41]</td>
+          </tr>
+          <tr>
+            <td>反戰信後遭解雇</td>
+            <td>公開表態並接受媒體採訪</td>
+            <td>瞬間喪失工作迫使他思考資本與職涯主導權</td>
+            <td>為策略核心人員設立現金與技能備援</td>
+            <td>[p.48][p.49][p.50]</td>
+          </tr>
+          <tr>
+            <td>弗萊費爾德糖價投資</td>
+            <td>利用計量模型押注原物料期貨</td>
+            <td>資金 10 倍成長，引發對量化交易的雄心</td>
+            <td>將學術模型轉化為可執行財務策略</td>
+            <td>[p.56][p.57]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">部署量化策略前確保模型、人才與制度三項穩定</td>
+            <td>模型是否考慮交易成本與衝擊</td>
+            <td>測試報表包含滑點、費用情境</td>
+            <td>重新校準交易頻率或流動性假設</td>
+            <td>[p.46]</td>
+          </tr>
+          <tr>
+            <td>團隊是否維持開放創意文化</td>
+            <td>點子回顧會議具備紀錄與後續跟蹤</td>
+            <td>補辦工作坊並指定負責人追蹤</td>
+            <td>[p.42][p.52]</td>
+          </tr>
+          <tr>
+            <td>核心人員是否具備職涯緩衝</td>
+            <td>現金儲備或保險覆蓋突發解雇風險</td>
+            <td>延後加碼，先強化財務安全網</td>
+            <td>[p.49][p.50]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第二章，頁碼如標示。若需交叉驗證，請對照原書頁面。
+    </footer>
+  </main>
+</body>
+</html>

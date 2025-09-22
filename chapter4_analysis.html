@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第四章 投資洞察摘要</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.65;
+      background: #f5f8fd;
+      color: #1f2933;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0d3259, #3f6aa6);
+      color: #fff;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(13, 50, 89, 0.09);
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #10325a;
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin: 28px 0 12px;
+      color: #174a84;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d4e2f7;
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #e9f2fd;
+      color: #123b73;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: #e1ebff;
+      color: #23457a;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid #dbe6f8;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #1a3f6b;
+    }
+    .chart {
+      margin-top: 16px;
+      --max: 900;
+    }
+    .bar {
+      position: relative;
+      background: #eaf2ff;
+      border-radius: 999px;
+      margin: 12px 0;
+      padding: 8px 12px;
+      overflow: hidden;
+    }
+    .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4c7edc, #72a4ff);
+      width: calc(var(--value) / var(--max) * 100%);
+      border-radius: inherit;
+      opacity: 0.85;
+    }
+    .bar span {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: #18355a;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #5b708d;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f89;
+      margin-top: 32px;
+    }
+    a {
+      color: #2f65c8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第四章「機器學習」投資洞察</h1>
+    <p>紀錄文藝復興早期團隊如何將資料、演算法與人才磨合成量化雛形，並面對黑箱與人性衝突。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>遭遇連番虧損後，西蒙斯決定回到數學本業，為詹姆斯．艾克斯配置資源測試全自動模型<span class="pill">[p.85][p.86]</span></li>
+        <li>艾克斯以趨勢演算法取代主觀交易，卻因強勢性格與功勞爭議讓團隊博弈式競爭加劇<span class="pill">[p.91][p.96]</span></li>
+        <li>桑德爾．史特勞斯建立歷史資料庫並補齊缺漏，成為日後機器學習的關鍵燃料<span class="pill">[p.92][p.95][p.103]</span></li>
+        <li>搬遷至加州後成立艾克斯康，部署 VAX/Gould 主機、擴展到 21 檔期貨並以半自動指令執行<span class="pill">[p.97][p.98]</span></li>
+        <li>雷諾．卡莫納引入隨機微分與核方法，團隊在黑箱疑慮下仍見績效提升，為機器學習奠基<span class="pill">[p.100][p.103][p.104]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>危機後重建模型紀律</td>
+            <td>虧損期停止情緒化下單，將研發資源集中於可複製的演算法與資料流程</td>
+            <td>需保留人工監督以應對模型失靈，避免全盤黑箱化</td>
+            <td>[p.85][p.103]</td>
+          </tr>
+          <tr>
+            <td>資料工廠與缺漏填補</td>
+            <td>系統化收集、驗證、模擬缺漏資料，建立可回溯至早期市場的時間序列</td>
+            <td>模型化資料應標註來源與置信度，防止將推估值誤當事實</td>
+            <td>[p.92][p.103]</td>
+          </tr>
+          <tr>
+            <td>跨域分工與股權對齊</td>
+            <td>以股權或分潤綁定量化科學家、數據工程與交易執行，同時明訂決策權</td>
+            <td>性格衝突可能升高溝通成本，需設立公平機制與衝突調解</td>
+            <td>[p.96][p.97]</td>
+          </tr>
+          <tr>
+            <td>硬體與自動化節奏</td>
+            <td>依策略複雜度擴充計算資源（VAX/Gould 等）與半自動下單流程</td>
+            <td>硬體採購與維運成本高，需事先評估負載與即時性要求</td>
+            <td>[p.97][p.98]</td>
+          </tr>
+          <tr>
+            <td>黑箱治理與解釋層</td>
+            <td>對核方法等非線性模型建立輸出審核、紀錄與人類可理解的摘要</td>
+            <td>若無解釋層，管理者難以授權；需在敏捷調參與可解釋性間取舍</td>
+            <td>[p.103][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>馬可夫鏈：下一狀態僅依賴當前狀態的隨機過程<span class="pill">[p.99]</span></li>
+            <li>核迴歸（kernel regression）：以相似度尋找非線性關係的機器學習方法<span class="pill">[p.103]</span></li>
+            <li>突破訊號：價格突破區間即啟動交易的技術規則<span class="pill">[p.102]</span></li>
+            <li>VAX-11/750：儲存 300MB 的小型主機，支撐早期回測<span class="pill">[p.97]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>資料煉油廠：持續清洗、補齊、驗證歷史數據以供模型使用<span class="pill">[p.92][p.103]</span></li>
+            <li>人機雙軌：演算法產出訊號，人工負責風險審核與客戶溝通<span class="pill">[p.98][p.104]</span></li>
+            <li>黑箱守門人：管理層需建立判準，在看不透程式時仍能做出授權或叫停<span class="pill">[p.103][p.104]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>資料密度：資料庫涵蓋越深，核方法等非線性模型成效越佳<span class="pill">[p.103]</span></li>
+            <li>硬體瓶頸：需要更高速儲存與計算時，是提高模型層級的前兆<span class="pill">[p.97]</span></li>
+            <li>管理不適感：領導者對輸出來源的不安是建立解釋層的警訊<span class="pill">[p.103][p.104]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控</h2>
+      <h3>趨勢＋突破混合策略（艾克斯）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>觀察 10–50 日移動平均與突破訊號，順勢建立期貨部位</td>
+            <td>當價格突破既定區間且多重均線同向時下單</td>
+            <td>趨勢反轉或突破失敗即止損；需控管電話下單延遲</td>
+            <td>移動平均、突破閾值、單筆風險</td>
+            <td>[p.91][p.102]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>缺口均值回歸策略（勞佛）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>針對開盤大幅高/低於前收盤的商品建立反向部位</td>
+            <td>開盤價偏離前收盤達預設百分比</td>
+            <td>價格回補缺口或達最大虧損即平倉；監控流動性</td>
+            <td>開盤缺口幅度、成交量、滑點</td>
+            <td>[p.96]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>核迴歸機器學習策略（卡莫納）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>以核方法搜尋歷史類似情境，預測趨勢持續時間並下注</td>
+            <td>模型相似度分數超過門檻且多市場一致</td>
+            <td>設定信心係數下限；模型漂移或資料超界即停止</td>
+            <td>相似度指標、資料覆蓋率、模型殘差</td>
+            <td>[p.102][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行檢核與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>資料完整度與標記</td>
+            <td>原始與模擬資料皆附來源與置信度，缺漏小於 1%</td>
+            <td>史特勞斯資料庫、推算紀錄</td>
+            <td>[p.92][p.103]</td>
+          </tr>
+          <tr>
+            <td>硬體資源負載</td>
+            <td>回測耗時與資源使用低於主機 70% 閾值</td>
+            <td>VAX/Gould 系統監控、作業紀錄</td>
+            <td>[p.97]</td>
+          </tr>
+          <tr>
+            <td>模型解釋層</td>
+            <td>每一交易訊號均附重要特徵貢獻與審核結果</td>
+            <td>模型輸出報告、審核簽章</td>
+            <td>[p.103][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>非線性核迴歸優於線性迴歸預測大宗商品趨勢</td>
+            <td>商品價格、核相似度、線性預測結果</td>
+            <td>核迴歸年化報酬 ≥ 線性模型 +3%，且夏普比率提升</td>
+            <td>日頻 → 年度</td>
+            <td>[p.102][p.104]</td>
+          </tr>
+          <tr>
+            <td>開盤缺口均值回歸在高流動性商品可獲得正期望</td>
+            <td>開盤價、前收盤、成交量、滑點估計</td>
+            <td>策略勝率 ≥55%，最大回撤低於基準</td>
+            <td>日內 → 季度</td>
+            <td>[p.96]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場 / 出場規則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>依據</th>
+            <th>例外</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>半自動指令需人工確認與限價</td>
+            <td>艾克斯康透過電訊發送條件單，再由營業員執行</td>
+            <td>市況極佳且滑點可控時，方可使用市價單</td>
+            <td>[p.98]</td>
+          </tr>
+          <tr>
+            <td>黑箱訊號需通過審核清單才可下單</td>
+            <td>西蒙斯要求理解模型邏輯的最低標準</td>
+            <td>若黑箱輸出附帶充分解釋與回測證據，可快速放行</td>
+            <td>[p.103][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart">
+        <div class="bar" style="--value:20000;"><span>史特勞斯年薪 &lt; 2 萬美元<span class="pill">[p.93]</span></span></div>
+        <div class="bar" style="--value:300;"><span>VAX-11/750 儲存 300MB<span class="pill">[p.97]</span></span></div>
+        <div class="bar" style="--value:900;"><span>Gould 超級迷你儲存 900MB<span class="pill">[p.97]</span></span></div>
+        <div class="bar" style="--value:21;"><span>交易期貨品種 21 檔<span class="pill">[p.98]</span></span></div>
+        <div class="bar" style="--value:25;"><span>西蒙斯持股 25%（艾克斯康）<span class="pill">[p.97]</span></span></div>
+        <div class="bar" style="--value:37;"><span>杭亭頓海灘距洛杉磯 37 英里<span class="pill">[p.97]</span></span></div>
+      </div>
+      <p class="note">數據以原始單位呈現（美元、MB、品種數、百分比、英里）；橫向長度僅為相對規模視覺化。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>情境</th>
+            <th>決策 / 行動</th>
+            <th>成果與啟示</th>
+            <th>可複製要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>資料工廠崛起</td>
+            <td>史特勞斯離開電腦中心，全職建構歷史資料並補齊缺漏</td>
+            <td>為機器學習提供深度樣本，改善演算法績效</td>
+            <td>配置專職資料團隊並建立模擬資料標記制度</td>
+            <td>[p.92][p.95][p.103]</td>
+          </tr>
+          <tr>
+            <td>艾克斯康成立</td>
+            <td>搬遷至加州，西蒙斯持股 25% 提供資金與客戶溝通</td>
+            <td>擴大交易品類與硬體規模，形成分工明確的衛星團隊</td>
+            <td>以股權結構鎖定關鍵人才並明訂責任邊界</td>
+            <td>[p.97][p.98]</td>
+          </tr>
+          <tr>
+            <td>核方法導入</td>
+            <td>卡莫納提出非線性迴歸，遭遇「黑箱」質疑仍持續迭代</td>
+            <td>績效提升並開啟機器學習路線，但迫使管理層建立解釋層</td>
+            <td>在導入先進模型前先規劃審核流程與可視化報告</td>
+            <td>[p.102][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">部屬核方法前確保資料、硬體與治理到位</td>
+            <td>資料是否標記推估來源</td>
+            <td>所有模擬/補值皆帶有標籤與置信度</td>
+            <td>重新產生補值或改用保守假設</td>
+            <td>[p.103]</td>
+          </tr>
+          <tr>
+            <td>硬體與管線是否可支撐迭代</td>
+            <td>回測時間在 SLA 內，資源使用穩定</td>
+            <td>升級硬體或調整批次排程</td>
+            <td>[p.97]</td>
+          </tr>
+          <tr>
+            <td>黑箱輸出是否有審核紀錄</td>
+            <td>每筆訊號皆附審核人與主要特徵說明</td>
+            <td>延後下單並補齊審核流程</td>
+            <td>[p.103][p.104]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第四章，頁碼如標示。建議回查原文以驗證上下文與假設。
+    </footer>
+  </main>
+</body>
+</html>
