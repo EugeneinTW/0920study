@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第十章 投資洞察摘要</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; line-height: 1.65; background: #f3f7fc; color: #1f2933; padding-bottom: 64px; }
+    header { background: linear-gradient(135deg, #082544, #396399); color: #fff; padding: 52px 24px 36px; text-align: center; }
+    header h1 { margin: 0; font-size: 2rem; letter-spacing: 0.05em; }
+    header p { margin: 12px 0 0; font-size: 1.05rem; opacity: 0.85; }
+    main { max-width: 960px; margin: 0 auto; padding: 32px 24px; }
+    section { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 10px 24px rgba(8, 37, 64, 0.08); margin-bottom: 28px; }
+    h2 { margin-top: 0; color: #10325a; font-size: 1.35rem; }
+    h3 { margin: 28px 0 12px; color: #174a84; font-size: 1.15rem; }
+    p { margin: 0 0 12px; }
+    ul { padding-left: 20px; margin: 0; }
+    li { margin-bottom: 6px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 0.95rem; }
+    th, td { border: 1px solid #d4e2f7; padding: 10px 12px; vertical-align: top; }
+    th { background: #e6f0fd; color: #123b73; text-align: left; font-weight: 600; }
+    .pill { display: inline-block; padding: 2px 10px; margin-left: 6px; border-radius: 999px; background: #dfe9ff; color: #23457a; font-size: 0.85rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 16px; }
+    .card { border: 1px solid #dbe6f8; border-radius: 10px; padding: 16px; background: #fbfdff; }
+    .card h4 { margin: 0 0 10px; font-size: 1.05rem; color: #1a3f6b; }
+    .chart { margin-top: 16px; --max: 90; }
+    .bar { position: relative; background: #eaf2ff; border-radius: 999px; margin: 12px 0; padding: 8px 12px; overflow: hidden; }
+    .bar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #4c7edc, #72a4ff); width: calc(var(--value) / var(--max) * 100%); border-radius: inherit; opacity: 0.85; }
+    .bar span { position: relative; z-index: 1; font-weight: 600; color: #18355a; }
+    .note { font-size: 0.85rem; color: #5b708d; margin-top: 8px; }
+    footer { text-align: center; font-size: 0.85rem; color: #5c6f89; margin-top: 32px; }
+    a { color: #2f65c8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第十章「機器學習」投資洞察</h1>
+    <p>聚焦文藝復興股票策略的誕生：布朗與莫瑟的自動交易系統、執行瓶頸、文化衝突與科技泡沫考驗。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>布朗與莫瑟打造 50 萬行程式碼的自我改良交易系統，保留弗瑞的均值回歸模型為核心<span class="pill">[p.212]</span></li>
+        <li>策略在小資產時有效，但規模放大即失靈，顯示容量與執行成本成為瓶頸<span class="pill">[p.212][p.213]</span></li>
+        <li>IBM 夥伴（雙胞胎達拉皮耶川與梅格曼）加入，文化磨合與技術整頓（C++ 重構）同時展開<span class="pill">[p.213][p.214]</span></li>
+        <li>梅格曼的未授權監控程式意外散播病毒，凸顯安全治理與跨團隊程式碼依賴問題<span class="pill">[p.214][p.215]</span></li>
+        <li>早期虧損、技術泡沫崩盤導致大獎章數日虧損近 3 億美元，布朗恐慌；西蒙斯仍堅持「相信模型」<span class="pill">[p.238][p.239]</span></li>
+        <li>團隊找到問題在於動能訊號對市場 regime 轉折過度敏感，凸顯模型監控與停用流程的重要性<span class="pill">[p.238][p.239]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略容量管理</td>
+            <td>定期量測策略衝擊成本，設置資金或倉位上限，避免在放大後失靈</td>
+            <td>需整合滑點分析、執行費用與市場深度資料</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>版本與安全治理</td>
+            <td>建立程式碼審核、權限控制與後門監控，防止未授權工具造成事故</td>
+            <td>需 DevSecOps 流程與自動化監控</td>
+            <td>[p.214][p.215]</td>
+          </tr>
+          <tr>
+            <td>Regime 監控</td>
+            <td>對動能/均值回歸等策略建立市場狀態指標與停用/減碼條件</td>
+            <td>需定義 regime 指標並與模型執行耦合</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+          <tr>
+            <td>文化整合與激勵</td>
+            <td>對跨團隊人才提供清楚的期望與獎勵，減少內部衝突</td>
+            <td>需領導層持續調節與透明溝通</td>
+            <td>[p.213][p.214]</td>
+          </tr>
+          <tr>
+            <td>危機時的模型紀律</td>
+            <td>建立「什麼情況可手動介入」的準則，平衡模型信任與風險管理</td>
+            <td>需明訂手動覆寫程序與審批機制</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>回歸平均策略：押注價格偏離將回歸歷史常態的統計套利<span class="pill">[p.212]</span></li>
+            <li>機器學習訊號：布朗/莫瑟的自我改良系統與動能偵測<span class="pill">[p.212][p.238]</span></li>
+            <li>Regime 轉換：市場狀態突變導致策略失效的情境<span class="pill">[p.238]</span></li>
+            <li>程式碼後門：未授權監控工具觸發病毒的安全事件<span class="pill">[p.214][p.215]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>容量曲線：策略報酬 vs 資金規模呈倒 U 形，需找到最佳點<span class="pill">[p.212][p.213]</span></li>
+            <li>失敗容忍：允許探索與錯誤，但需有快速隔離與修復流程<span class="pill">[p.214]</span></li>
+            <li>危機紀律：在巨幅波動時維持程序化作業，避免恐慌覆寫模型<span class="pill">[p.238][p.239]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>實盤虧損擴大：超過歷史回撤需檢視執行與訊號<span class="pill">[p.238]</span></li>
+            <li>程式碼出現未授權變更：安全系統需快速警報和隔離<span class="pill">[p.214][p.215]</span></li>
+            <li>團隊情緒（如布朗恐慌）顯示壓力極高，需額外支持與風控檢查<span class="pill">[p.238][p.239]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控案例</h2>
+      <h3>股票均值回歸系統</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>做法</th>
+            <th>優點</th>
+            <th>風險 / 缺陷</th>
+            <th>改善要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>動態調整倉位，押注股票偏離回歸</td>
+            <td>策略規模中立、理論明確</td>
+            <td>容量限制、對 regime 轉折敏感</td>
+            <td>建立容量監控、加入 regime 判斷與停用機制</td>
+            <td>[p.212][p.238]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>安全事故（Joshua 事件）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>原因</th>
+            <th>影響</th>
+            <th>改進</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>未授權監控程式散播病毒</td>
+            <td>交易中斷、系統全面重啟</td>
+            <td>建立代碼審核、權限管理、DevSecOps</td>
+            <td>[p.214][p.215]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行檢核與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略容量影響</td>
+            <td>策略收益隨資金規模變化不超過容忍範圍</td>
+            <td>成本模型、成交分析</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>程式碼變更審核</td>
+            <td>所有部署均經審核與版本控制</td>
+            <td>CI/CD 系統、審核紀錄</td>
+            <td>[p.214][p.215]</td>
+          </tr>
+          <tr>
+            <td>Regime 監控</td>
+            <td>動能/均值訊號指標與市場狀態一致</td>
+            <td>市場指標儀表板、風控報告</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略容量與報酬呈倒 U 型關係</td>
+            <td>資金規模、報酬、成本</td>
+            <td>找出最適資金點；超過即報酬下降</td>
+            <td>週／月</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>Regime 轉換可透過波動與成交量指標預測</td>
+            <td>波動率、成交量、策略損益</td>
+            <td>指標異常前 1-2 週預警成功率顯著</td>
+            <td>日／週</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場 / 出場規則借鏡</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>歷史啟示</th>
+            <th>文藝復興應用</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>達到容量上限即減碼</td>
+            <td>策略放大後失靈</td>
+            <td>建立容量上限與自動減碼流程</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>危機時遵循程序</td>
+            <td>布朗恐慌、系統堅持信號</td>
+            <td>設定手動覆寫門檻與審批機制</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart">
+        <div class="bar" style="--value:90;"><span>科技泡沫破滅時單日虧損 9,000 萬美元<span class="pill">[p.238]</span></span></div>
+        <div class="bar" style="--value:50;"><span>股票交易系統程式碼 50 萬行<span class="pill">[p.212]</span></span></div>
+        <div class="bar" style="--value:35;"><span>股票初始資金約 3,500 萬美元<span class="pill">[p.212]</span></span></div>
+        <div class="bar" style="--value:10;"><span>2000 年單月報酬 10.5%（一月）<span class="pill">[p.238]</span></span></div>
+        <div class="bar" style="--value:80;"><span>納斯達克自高點跌幅 78%（約略）<span class="pill">[p.238]</span></span></div>
+      </div>
+      <p class="note">數值為原始報告數據（美元/行數/％），用於比較第十章的重要規模與風險節點。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>案例</th>
+            <th>行動</th>
+            <th>成果與啟示</th>
+            <th>可複製要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>布朗／莫瑟系統</td>
+            <td>自動化與模型保留</td>
+            <td>小規模成功，容量受限</td>
+            <td>大資金前需容量測試與風控</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>Joshua 病毒事件</td>
+            <td>未授權監控導致病毒</td>
+            <td>全公司停擺，暴露流程缺陷</td>
+            <td>實施代碼審核、權限控管</td>
+            <td>[p.214][p.215]</td>
+          </tr>
+          <tr>
+            <td>科技泡沫危機</td>
+            <td>模型動能信號在崩盤放大虧損</td>
+            <td>凸顯 regime 監控與手動覆寫的重要</td>
+            <td>建立停用指標與審批流程</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">確保策略在擴張與危機下仍可控</td>
+            <td>容量測試是否完成</td>
+            <td>完成不同資金規模測試，收益曲線合理</td>
+            <td>暫停擴張並補測</td>
+            <td>[p.212][p.213]</td>
+          </tr>
+          <tr>
+            <td>程式碼安全審核</td>
+            <td>所有部署經審批與版本控管</td>
+            <td>回滾部署、調查未授權操作</td>
+            <td>[p.214][p.215]</td>
+          </tr>
+          <tr>
+            <td>市場 regime 監控</td>
+            <td>動能／均值指標與市場狀態一致</td>
+            <td>啟動減碼或停用流程</td>
+            <td>[p.238][p.239]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第十章，頁碼如標示。建議回查原文以驗證上下文與細節。
+    </footer>
+  </main>
+</body>
+</html>
