@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第五章 投資洞察摘要</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.65;
+      background: #f4f7fb;
+      color: #1f2933;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0d3056, #3c69a3);
+      color: #fff;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(13, 48, 86, 0.08);
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #10325a;
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin: 28px 0 12px;
+      color: #174a84;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d4e2f7;
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #e8f1fd;
+      color: #123b73;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: #e0ebff;
+      color: #23457a;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid #dbe6f8;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #1a3f6b;
+    }
+    .chart {
+      margin-top: 16px;
+      --max: 70;
+    }
+    .bar {
+      position: relative;
+      background: #eaf2ff;
+      border-radius: 999px;
+      margin: 12px 0;
+      padding: 8px 12px;
+      overflow: hidden;
+    }
+    .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4c7edc, #72a4ff);
+      width: calc(var(--value) / var(--max) * 100%);
+      border-radius: inherit;
+      opacity: 0.85;
+    }
+    .bar span {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: #18355a;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #5b708d;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f89;
+      margin-top: 32px;
+    }
+    a {
+      color: #2f65c8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第五章「成立大獎章基金」投資洞察</h1>
+    <p>聚焦伯利坎普加入後的學術與交易文化碰撞，與大獎章基金布局前的策略、風控及人際再造。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>艾爾文．伯利坎普以賽局理論與資訊論背景加入團隊，意在讓量化模型跳脫「普通策略」<span class="pill">[p.106][p.114]</span></li>
+        <li>艾克斯康擴張後績效轉弱，舊有趨勢交易遇到競爭壓力與黃豆、長線訊號失靈<span class="pill">[p.118][p.119]</span></li>
+        <li>西蒙斯下令暫停長線交易並尋找新策略，觸發與艾克斯的權限衝突與訴訟威脅<span class="pill">[p.120][p.121]</span></li>
+        <li>伯利坎普倡議更靈活的期權與組合策略，強調風險對沖與期貨之外的機會<span class="pill">[p.110][p.117]</span></li>
+        <li>基金資產萎縮至 2,000 萬美元臨界點，凸顯投資人壓力下需快速創新與治理調整<span class="pill">[p.121]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>多策略視角</td>
+            <td>在趨勢策略遇阻時，引入期權、賽局與資訊論設計的套利/組合策略</td>
+            <td>需具備估價模型與對沖機制，避免不熟悉的衍生品過度風險</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+          <tr>
+            <td>權限界定</td>
+            <td>明文化投資長短期策略的停開條件、決策流程與簽核層級</td>
+            <td>停開需提前告知並提供替代方案，避免團隊士氣崩潰</td>
+            <td>[p.119][p.120]</td>
+          </tr>
+          <tr>
+            <td>投資人溝通節奏</td>
+            <td>在回撤期增加更新頻率與策略說明，減少恐慌撤資</td>
+            <td>資訊透明需與法務、策略保密平衡</td>
+            <td>[p.121]</td>
+          </tr>
+          <tr>
+            <td>競爭監控</td>
+            <td>建立「策略壽命」檢查表，監控市場上類似趨勢交易者的擁擠程度</td>
+            <td>資料需涵蓋交易量、持倉與公開策略，並設領先指標</td>
+            <td>[p.118]</td>
+          </tr>
+          <tr>
+            <td>人才定位</td>
+            <td>賽局理論專家可負責複雜衍生品設計，與數據工程共組研發小組</td>
+            <td>需防止與既有核心人物的權力衝突，設定治理機制</td>
+            <td>[p.106][p.114]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>大獎章基金（Medallion Fund）：文藝復興旗艦基金，聚焦量化與衍生品策略<span class="pill">[p.106]</span></li>
+            <li>賽局理論：分析競爭者策略互動的方法，伯利坎普專長<span class="pill">[p.107][p.110]</span></li>
+            <li>資訊理論：評估訊號與噪音效率，通常用於通訊與編碼<span class="pill">[p.114]</span></li>
+            <li>趨勢交易擁擠度：衡量市場上相同策略的飽和程度<span class="pill">[p.118]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>策略壽命：隨競爭者增多而快速退化的模型半衰期<span class="pill">[p.118]</span></li>
+            <li>權責對齊：投資與資金募集角色分離時需設停損與仲裁機制<span class="pill">[p.120]</span></li>
+            <li>資料驅動革新：以核方法與非線性歷史比對提供新訊號<span class="pill">[p.103][p.104]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>長線趨勢失效：多月虧損與競爭者擁擠是策略退化警訊<span class="pill">[p.118][p.120]</span></li>
+            <li>資產縮水至 2,000 萬美元：表示需重新定位或關閉基金<span class="pill">[p.121]</span></li>
+            <li>投資人抱怨頻率：電話、撤資請求增加為治理緊張訊號<span class="pill">[p.121]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控</h2>
+      <h3>趨勢交易 2.0（艾克斯）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>延續核迴歸趨勢模型結合主觀判斷</td>
+            <td>模型發出長期趨勢訊號且新聞面支持</td>
+            <td>虧損連續數月或擁擠度升高即動態減碼</td>
+            <td>核相似度、新聞情緒、策略擁擠指標</td>
+            <td>[p.103][p.118]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>期權對沖與組合策略（伯利坎普倡議）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>入場條件</th>
+            <th>出場與風控</th>
+            <th>關鍵指標</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>利用期權、市場製造與賽局技巧鎖定差價</td>
+            <td>市場波動與流動性可支持期權結構</td>
+            <td>設 Gamma/Vega 暴露上限與動態 Delta 對沖</td>
+            <td>隱含波動率、希臘值、成交深度</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行檢核與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略擁擠度</td>
+            <td>持倉集中度與外部趨勢策略指標低於設定門檻</td>
+            <td>交易所資料、CTA 報告</td>
+            <td>[p.118]</td>
+          </tr>
+          <tr>
+            <td>期權風險對沖</td>
+            <td>主要希臘值在風控規範內，並有對沖紀錄</td>
+            <td>期權風控報表、交易日誌</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+          <tr>
+            <td>溝通迴圈</td>
+            <td>投資人溝通紀錄每週更新，包含策略調整說明</td>
+            <td>投資人簡報、會議記錄</td>
+            <td>[p.121]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>期權組合可在趨勢退潮時提供對沖收益</td>
+            <td>期權價格、隱含波動、趨勢策略回報</td>
+            <td>衡量趨勢策略虧損期，期權組合能部分抵銷</td>
+            <td>日頻 → 月度</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+          <tr>
+            <td>策略擁擠度上升預示報酬下降</td>
+            <td>持倉集中指標、趨勢策略回報</td>
+            <td>擁擠度指標與未來報酬有顯著負相關</td>
+            <td>週頻 → 季度</td>
+            <td>[p.118]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場 / 出場規則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>依據</th>
+            <th>例外</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>長線趨勢連續虧損即暫停</td>
+            <td>西蒙斯停止長線訊號並改求新策略</td>
+            <td>若有新的風控或對沖保護可遞延一週觀察</td>
+            <td>[p.120]</td>
+          </tr>
+          <tr>
+            <td>期權策略須先確定對沖資源</td>
+            <td>伯利坎普主張以對沖控制風險</td>
+            <td>市場深度不足時，只允許小規模測試</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart" style="--max:70;">
+        <div class="bar" style="--value:45;"><span>伯利坎普歡送會 450 人<span class="pill">[p.106]</span></span></div>
+        <div class="bar" style="--value:30;"><span>趨勢策略虧損約 30%（1988-1989）<span class="pill">[p.118][p.119]</span></span></span></div>
+        <div class="bar" style="--value:20;"><span>基金資產縮至 2,000 萬美元<span class="pill">[p.121]</span></span></div>
+        <div class="bar" style="--value:40;"><span>策略停損觸發條件：多月虧損＋擁擠度升高<span class="pill">[p.118][p.120]</span></span></div>
+        <div class="bar" style="--value:25;"><span>西蒙斯持股比率維持約 25%<span class="pill">[p.97][p.120]</span></span></div>
+      </div>
+      <p class="note">數值以原始單位呈現（人、%、百萬美元、百分比），用於比較第五章關鍵節點。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>情境</th>
+            <th>決策 / 行動</th>
+            <th>成果與啟示</th>
+            <th>可複製要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>伯利坎普加入</td>
+            <td>引進賽局/資訊理論視角，推動期權與組合策略</td>
+            <td>擴大策略版圖並挑戰「普通策略」思維</td>
+            <td>在成熟團隊插入新專長時需兼顧治理與激勵</td>
+            <td>[p.106][p.114]</td>
+          </tr>
+          <tr>
+            <td>長線交易停擺</td>
+            <td>西蒙斯暫停長線訊號，要求提出改進計畫</td>
+            <td>避免持續虧損惡化，但引起夥伴對權限與信任的衝突</td>
+            <td>提前設停損與溝通流程，保留緊急仲裁權</td>
+            <td>[p.120]</td>
+          </tr>
+          <tr>
+            <td>策略擁擠導致虧損</td>
+            <td>趨勢交易面臨競爭與市場反向，黃豆部位重挫</td>
+            <td>顯示資金規模擴張時需監控擁擠度與市場所處邊際</td>
+            <td>擁擠度指標納入風控，適時轉向新策略</td>
+            <td>[p.118][p.119]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">確保多策略組合在競爭與壓力下仍具韌性</td>
+            <td>趨勢策略擁擠度是否偏高</td>
+            <td>擁擠指標低於設定閾值</td>
+            <td>調降權重並尋找替代策略</td>
+            <td>[p.118]</td>
+          </tr>
+          <tr>
+            <td>期權對沖計畫是否完備</td>
+            <td>對沖策略與執行人員已確認</td>
+            <td>延後進場並補齊對沖方案</td>
+            <td>[p.110][p.117]</td>
+          </tr>
+          <tr>
+            <td>投資人溝通是否更新</td>
+            <td>最新策略調整與風控說明已發佈</td>
+            <td>先完成溝通再進行重大調整</td>
+            <td>[p.121]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第五章，頁碼如標示。建議對照原文檢視背景與細節。
+    </footer>
+  </main>
+</body>
+</html>

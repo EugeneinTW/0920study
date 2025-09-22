@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>《洞悉市場的人》第七章 投資洞察摘要</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.65;
+      background: #f4f7fc;
+      color: #1f2933;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0b2c52, #3c679e);
+      color: #fff;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(11, 44, 82, 0.09);
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #10325a;
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin: 28px 0 12px;
+      color: #174a84;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d4e2f7;
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #e6f0fd;
+      color: #123b73;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: #dee9ff;
+      color: #23457a;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid #dbe6f8;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #1a3f6b;
+    }
+    .chart {
+      margin-top: 16px;
+      --max: 160;
+    }
+    .bar {
+      position: relative;
+      background: #eaf2ff;
+      border-radius: 999px;
+      margin: 12px 0;
+      padding: 8px 12px;
+      overflow: hidden;
+    }
+    .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4c7edc, #72a4ff);
+      width: calc(var(--value) / var(--max) * 100%);
+      border-radius: inherit;
+      opacity: 0.85;
+    }
+    .bar span {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: #18355a;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #5b708d;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5c6f89;
+      margin-top: 32px;
+    }
+    a {
+      color: #2f65c8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>《洞悉市場的人》第七章「量化交易史」投資洞察</h1>
+    <p>回顧策略先驅與失敗案例，理解文藝復興策略與市場傳統的脈絡與風險警訊。</p>
+  </header>
+  <main>
+    <section>
+      <h2>章節重點</h2>
+      <ul>
+        <li>技術分析從本間宗久、威廉．甘恩到蔡至勇的歷史演進，顯示市場循環與人性弱點<span class="pill">[p.141][p.143]</span></li>
+        <li>1980年代即有「電腦人」嘗試規則化交易，但硬體、資料與統計能力不足導致失敗<span class="pill">[p.143][p.144]</span></li>
+        <li>芝加哥交易員理查．丹尼斯的烏龜實驗證明規則化交易可教，但也有策略飽和風險<span class="pill">[p.144][p.147]</span></li>
+        <li>多數早期量化先驅缺乏風控、資金管理與持續迭代能力，最終壯烈成仁或消失<span class="pill">[p.145][p.150]</span></li>
+        <li>文藝復興的挑戰在於面對這些歷史陰影，加強資料、模型、風控與團隊結構，才能持續突破<span class="pill">[p.152][p.158]</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>可操作原則</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>主題</th>
+            <th>行動建議</th>
+            <th>限制條件</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>歷史借鏡</td>
+            <td>在設計策略時先梳理同類策略的興衰與失敗原因，建立避免清單</td>
+            <td>需持續更新歷史案例資料庫，並與當前市況比對</td>
+            <td>[p.141][p.148]</td>
+          </tr>
+          <tr>
+            <td>規則化與驗證</td>
+            <td>規則需可被程式精確執行並透過長期資料驗證，避免主觀圖形判讀</td>
+            <td>需取得足量、品質高的歷史與即時資料</td>
+            <td>[p.143][p.146]</td>
+          </tr>
+          <tr>
+            <td>風控與資金管理</td>
+            <td>借鏡丹尼斯等案例設定風險上限、分散策略、控制槓桿</td>
+            <td>需配合交易成本與流動性假設</td>
+            <td>[p.145][p.147]</td>
+          </tr>
+          <tr>
+            <td>持續迭代</td>
+            <td>建立迭代流程與實驗管線，以因應策略壽命與市場競爭</td>
+            <td>需配置研發資源、版本控制與回溯檢討機制</td>
+            <td>[p.152][p.158]</td>
+          </tr>
+          <tr>
+            <td>團隊與文化</td>
+            <td>將科學方法、資料紀律與風險意識納入團隊文化，避免重蹈失敗覆轍</td>
+            <td>需領導層支持，並設透明溝通與審核流程</td>
+            <td>[p.155][p.158]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>關鍵詞、模型與訊號</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>名詞索引</h4>
+          <ul>
+            <li>波動法則（Law of Vibration）：甘恩用以預測市場的幾何週期理論<span class="pill">[p.141]</span></li>
+            <li>烏龜實驗：理查．丹尼斯培訓新手交易員的規則化實驗<span class="pill">[p.144][p.147]</span></li>
+            <li>技術分析：透過圖形與指標預測價格走向的方法，量化策略的前身<span class="pill">[p.141][p.143]</span></li>
+            <li>程式交易：以電腦執行預設規則的交易方式，在 1980s 開始流行<span class="pill">[p.143][p.145]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>心智模型</h4>
+          <ul>
+            <li>策略壽命曲線：隨採用者增加，策略優勢快速下降<span class="pill">[p.145][p.152]</span></li>
+            <li>風險聚集效應：缺乏風控的規則化策略在極端行情下容易爆倉<span class="pill">[p.146][p.150]</span></li>
+            <li>資料驅動演化：持續擴充資料與模型才能避免重演歷史失敗<span class="pill">[p.152][p.156]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>關鍵訊號</h4>
+          <ul>
+            <li>市場擁擠度提升：類似策略過度普及代表邊際優勢減少<span class="pill">[p.145][p.147]</span></li>
+            <li>技術進步：硬體、資料可得性提升是策略迭代潛在時機<span class="pill">[p.143][p.152]</span></li>
+            <li>風控缺口：歷史案例中多因缺乏停損與資金管理導致失敗<span class="pill">[p.146][p.150]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>策略與風控案例</h2>
+      <h3>甘恩波動法則</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>優勢</th>
+            <th>盲點 / 風險</th>
+            <th>借鏡行動</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>透過幾何/占星週期預測價格</td>
+            <td>強調循環、趨勢概念</td>
+            <td>缺乏驗證；高主觀性；結果不可靠</td>
+            <td>確立統計驗證流程，避免主觀圖形判讀</td>
+            <td>[p.141][p.142]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>烏龜交易實驗</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>優勢</th>
+            <th>盲點 / 風險</th>
+            <th>借鏡行動</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>明確規則教導趨勢追蹤</td>
+            <td>證明規則化交易可教與執行</td>
+            <td>規模擴大後衰退；缺乏市場適應</td>
+            <td>建立策略壽命監控與多策略組合</td>
+            <td>[p.144][p.147]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>程式交易失敗案例</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>策略</th>
+            <th>優勢</th>
+            <th>盲點 / 風險</th>
+            <th>借鏡行動</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1980s 電腦輔助交易</td>
+            <td>規模化執行可能</td>
+            <td>硬體/資料不足；缺乏風控</td>
+            <td>強化基礎設施與風險管理，持續迭代</td>
+            <td>[p.143][p.146]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>執行檢核與回測假說</h2>
+      <h3>執行檢核</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>檢核項</th>
+            <th>判準 / 閾值</th>
+            <th>資料來源</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略壽命評估</td>
+            <td>定期評估策略採用率與效能，設定退場條件</td>
+            <td>市場資料、擁擠度指標</td>
+            <td>[p.145][p.152]</td>
+          </tr>
+          <tr>
+            <td>資料品質</td>
+            <td>歷史資料完整、即時資料延遲符合策略需求</td>
+            <td>資料庫、行情監控</td>
+            <td>[p.143][p.156]</td>
+          </tr>
+          <tr>
+            <td>風險上限</td>
+            <td>設定最大回撤、槓桿與單筆風險</td>
+            <td>風控系統、交易日誌</td>
+            <td>[p.146][p.150]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>回測假說</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>假說</th>
+            <th>需要欄位</th>
+            <th>判定標準</th>
+            <th>時間尺度</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>策略擁擠度與未來報酬負相關</td>
+            <td>擁擠指標、策略回報</td>
+            <td>檢驗不同時期相關係數</td>
+            <td>週頻 → 年度</td>
+            <td>[p.145][p.152]</td>
+          </tr>
+          <tr>
+            <td>風控機制能降低極端回撤</td>
+            <td>帶風控與不帶風控策略報酬</td>
+            <td>比較最大回撤與回覆時間</td>
+            <td>日頻 → 月度</td>
+            <td>[p.146][p.150]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>入場 / 出場規則借鏡</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>規則</th>
+            <th>歷史教訓</th>
+            <th>文藝復興應用</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>設定停損與資金管理</td>
+            <td>多數失敗案例未設停損或槓桿過高</td>
+            <td>嚴格控制倉位、風險分散</td>
+            <td>[p.146][p.150]</td>
+          </tr>
+          <tr>
+            <td>規則需經驗證後再執行</td>
+            <td>甘恩等主觀策略缺乏驗證導致失敗</td>
+            <td>建置統計驗證與回測流程</td>
+            <td>[p.141][p.144]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>數據速覽</h2>
+      <div class="chart" style="--max:160;">
+        <div class="bar" style="--value:160;"><span>道瓊回到 386 點花 25 年<span class="pill">[p.142]</span></span></div>
+        <div class="bar" style="--value:12;"><span>甘恩 1 個月 130 → 12,000 美元（傳說）<span class="pill">[p.141]</span></span></div>
+        <div class="bar" style="--value:10;"><span>烏龜實驗規則化學員批次（跨 10 多人）<span class="pill">[p.144][p.147]</span></span></div>
+        <div class="bar" style="--value:100;"><span>1980s 電腦規則交易延遲與硬體限制設定（象徵）<span class="pill">[p.143]</span></span></div>
+        <p class="note">數值多為歷史案例參考（年數、金額、實驗規模）；用於比對策略演進節奏。</p>
+    </section>
+
+    <section>
+      <h2>案例萃取</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>案例</th>
+            <th>做法</th>
+            <th>失敗原因</th>
+            <th>借鏡要點</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>甘恩波動法則</td>
+            <td>占星與幾何圖形預測</td>
+            <td>缺驗證、主觀性強</td>
+            <td>建立統計檢定與回測系統</td>
+            <td>[p.141][p.142]</td>
+          </tr>
+          <tr>
+            <td>蔡至勇戰情室</td>
+            <td>高強度技術指標追蹤</td>
+            <td>策略在空頭市場失效</td>
+            <td>預設策略退場條件與多元配置</td>
+            <td>[p.142][p.143]</td>
+          </tr>
+          <tr>
+            <td>烏龜實驗</td>
+            <td>系統化訓練趨勢交易</td>
+            <td>規則公開、報酬衰退</td>
+            <td>建立策略壽命管理與創新機制</td>
+            <td>[p.144][p.147]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>交易前檢核表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>目的</th>
+            <th>檢核項</th>
+            <th>通過標準</th>
+            <th>未通過之處置</th>
+            <th>頁碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">避免重蹈歷史失敗</td>
+            <td>策略是否已完整回測並經驗證</td>
+            <td>跨不同時期回測並通過統計檢定</td>
+            <td>補充資料、重新調整規則</td>
+            <td>[p.143][p.148]</td>
+          </tr>
+          <tr>
+            <td>是否設立停損與資金管理</td>
+            <td>每策略有明確停損、回撤上限</td>
+            <td>設置或調整風控參數後再上線</td>
+            <td>[p.146][p.150]</td>
+          </tr>
+          <tr>
+            <td>策略壽命與擁擠度評估</td>
+            <td>檢查採用者數量與市場競爭</td>
+            <td>降低權重或尋找替代策略</td>
+            <td>[p.145][p.152]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      資料來源：《洞悉市場的人》第七章，頁碼如標示。建議回查原文以獲得完整背景與細節。
+    </footer>
+  </main>
+</body>
+</html>
